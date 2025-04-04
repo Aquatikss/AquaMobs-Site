@@ -94,9 +94,9 @@ html, body {
 }
 
 /*
-|--------------------------------|
-|THIS IS THE MAIN CONTENT SECTION|
-|--------------------------------|
+|----------------------------------|
+|THIS IS THE COPY IP BUTTON SECTION|
+|----------------------------------|
 */
 
 .copy-ip {
@@ -118,13 +118,21 @@ html, body {
     font-size: 14px;
     border-radius: 6px;
     cursor: pointer;
-    transition: border-color 0.3s, color 0.3s, transform 0.2s, box-shadow 0.3s;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0);
+    animation: floaty 9s ease-in-out infinite;
+    transition: all 0.3s ease-in-out;
 }
 
 .copy-ip button:hover {
     border-color: #FFFFFF;
     color: #FFFFFF;
-    transform: scale(1.05);
     box-shadow: 0 0 8px #3FD2C7;
+}
+
+@keyframes floaty {
+    0%   { transform: translateY(0px) translateX(0px) rotate(0deg); }
+    25%  { transform: translateY(-3px) translateX(3px) rotate(-1deg); }
+    50%  { transform: translateY(0px) translateX(0px) rotate(0deg); }
+    75%  { transform: translateY(3px) translateX(-3px) rotate(1deg); }
+    100% { transform: translateY(0px) translateX(0px) rotate(0deg); }
 }
